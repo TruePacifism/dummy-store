@@ -1,0 +1,68 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  min-width: 340px;
+  max-width: 90vw;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  position: relative;
+  animation: scaleIn 0.3s;
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #4f46e5;
+}
+.image {
+  display: block;
+  border-radius: 16px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 1.5rem;
+  object-fit: contain;
+}
+.price {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  color: #4f46e5;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}

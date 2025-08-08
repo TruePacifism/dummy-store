@@ -1,0 +1,92 @@
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  img {
+    width: 100%;
+    max-height: 160px;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+
+  h3 {
+    margin: 0.5rem 0;
+    font-size: 18px;
+  }
+
+  .category {
+    font-size: 14px;
+    color: gray;
+  }
+
+  .price {
+    font-weight: bold;
+    margin: 0.5rem 0;
+  }
+
+  button {
+    margin-top: auto;
+    padding: 0.5rem 1rem;
+    background: #3f51b5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+}
+
+.skeleton {
+  animation: pulse 1.5s infinite;
+}
+
+.skeletonThumbnail,
+.skeletonTitle,
+.skeletonCategory,
+.skeletonPrice,
+.skeletonButton {
+  background: #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.skeletonThumbnail {
+  width: 100%;
+  height: 160px;
+}
+.skeletonTitle {
+  width: 70%;
+  height: 18px; /* matches h3 font-size */
+  margin: 0.5rem 0;
+}
+.skeletonCategory {
+  width: 40%;
+  height: 14px; /* matches .category font-size */
+}
+.skeletonPrice {
+  width: 30%;
+  height: 16px; /* matches .price font-weight, visually a bit less than h3 */
+  margin: 0.5rem 0;
+}
+.skeletonButton {
+  width: 60%;
+  height: 36px; /* matches button padding and line height */
+  margin-top: auto;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
