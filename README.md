@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DummyStore
 
-## Getting Started
+DummyStore — современный демонстрационный интернет-магазин, реализованный на Next.js с использованием TypeScript, App Router, Zustand, Axios и SCSS-модулей.
 
-First, run the development server:
+## 🚀 Стек технологий
+
+- **Next.js (App Router)** — современный фреймворк для React
+- **TypeScript** — строгая типизация
+- **Zustand** — глобальное состояние (авторизация, UI)
+- **Axios** — запросы к API
+- **SCSS-модули** — стилизация компонентов
+- **Prettier, ESLint, Stylelint** — поддержка качества кода
+
+## ⚡ Функционал
+
+- Список товаров с Skeleton Loader при загрузке
+- Выделенный Featured Product
+- Анимация карточек товаров
+- Модальное окно с подробной информацией о товаре
+- Глобальный лоадер и обработка ошибок
+- Адаптивная верстка для мобильных устройств
+- Авторизация пользователя
+- Хэдер с навигацией и футер с соцсетями (GitHub, Telegram, YouTube)
+
+## 🛠️ Запуск проекта
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Откройте [http://localhost:3000](http://localhost:3000) в браузере.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📝 Структура проекта
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+eslint.config.mjs
+next-env.d.ts
+next.config.ts
+package.json
+README.md
+tsconfig.json
+public/
+src/
+  app/
+  components/
+  lib/
+  store/
+  styles/
+  types/
+```
 
-## Learn More
+## 🧩 Ключевые файлы
 
-To learn more about Next.js, take a look at the following resources:
+- `src/app/page.tsx` — главная страница
+- `src/components/FeaturedProduct/FeaturedProduct.tsx` — выделенный товар
+- `src/components/ProductModal/ProductModal.tsx` — модальное окно товара
+- `src/store/ui.ts` — глобальное состояние UI
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🧑‍💻 Качество кода
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Prettier, ESLint, Stylelint — автоформатирование и линтинг
 
-## Deploy on Vercel
+## 📦 Деплой
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Рекомендуется использовать [Vercel](https://vercel.com/) для деплоя Next.js приложений.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📚 Документация
+
+- [Next.js](https://nextjs.org/docs)
+- [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction)
+- [Axios](https://axios-http.com/docs/intro)
+- [SCSS-модули](https://nextjs.org/docs/app/building-your-application/styling/css-modules)
+
+---
+
+DummyStore — отличный старт для создания современного магазина на Next.js!
