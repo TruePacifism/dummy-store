@@ -1,13 +1,14 @@
 import { create } from "zustand";
+import { Product } from "@/types/product";
 
 interface UIState {
   loading: boolean;
   setLoading: (loading: boolean) => void;
   productModal: {
     open: boolean;
-    product: any | null;
+    product: Product | null;
   };
-  openProductModal: (product: any) => void;
+  openProductModal: (product: Product) => void;
   closeProductModal: () => void;
 }
 
@@ -18,7 +19,8 @@ export const useUIStore = create<UIState>((set) => ({
     open: false,
     product: null,
   },
-  openProductModal: (product) => set({ productModal: { open: true, product } }),
+  openProductModal: (product: Product) =>
+    set({ productModal: { open: true, product } }),
   closeProductModal: () =>
     set({ productModal: { open: false, product: null } }),
 }));
